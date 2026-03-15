@@ -26,7 +26,7 @@ val dependencies = {
   val fly4sVersion            = "0.0.20"
   val bcryptVersion           = "0.4"
   val munitVersion            = "1.0.3"
-  val munitCatsEffectVersion  = "2.0.0"
+  val munitCatsEffectVersion  = "2.2.0"
   val http4sMunitVersion      = "0.15.1"
 
   Seq(
