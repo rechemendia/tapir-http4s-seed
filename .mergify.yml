@@ -41,7 +41,7 @@ pull_request_rules:
       delete_head_branch: {}
   - name: automatic merge for scala-steward pull requests affecting build.sbt
     conditions:
-      - author=rodobarcaaa
+      - author=rechemendia
       - check-success=linter
       - check-success=sonar
       - "#files=1"
@@ -61,7 +61,7 @@ pull_request_rules:
         method: rebase
   - name: semi-automatic merge for scala-steward pull requests
     conditions:
-      - author=rodobarcaaa
+      - author=rechemendia
       - check-success=linter
       - check-success=sonar
       - "#approved-reviews-by>=1"
@@ -71,7 +71,7 @@ pull_request_rules:
   - name: automatic merge for scala-steward pull requests affecting project
       build.properties
     conditions:
-      - author=rodobarcaaa
+      - author=rechemendia
       - check-success=linter
       - check-success=sonar
       - "#files=1"
@@ -81,7 +81,7 @@ pull_request_rules:
         method: rebase
   - name: automatic merge for scala-steward pull requests affecting .scalafmt.conf
     conditions:
-      - author=rodobarcaaa
+      - author=rechemendia
       - check-success=linter
       - check-success=sonar
       - "#files=1"
