@@ -27,7 +27,7 @@ val dependencies = {
   val bcryptVersion           = "0.4"
   val munitVersion            = "1.0.3"
   val munitCatsEffectVersion  = "2.2.0"
-  val http4sMunitVersion      = "0.15.1"
+  val http4sMunitVersion      = "3.0.0"
 
   Seq(
     // base - Use alternative to pureconfig for now
