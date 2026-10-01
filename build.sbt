@@ -12,7 +12,7 @@ val dependencies = {
   val http4sVersion           = "0.23.34"
   val http4sBlazeVersion      = "0.23.18"
   val http4sPrometheusVersion = "0.25.0"
-  val prometheusVersion       = "0.16.0"
+  val prometheusVersion       = "1.9.0"
   val macwireVersion          = "2.6.7"
   val jwtVersion              = "11.0.4"
   val configVersion           = "1.4.6"
@@ -31,50 +31,50 @@ val dependencies = {
 
   Seq(
     // base - Use alternative to pureconfig for now
-    "com.typesafe"                   % "config"                    % configVersion,
-    "com.typesafe.scala-logging"    %% "scala-logging"             % scalaLoggingVersion,
-    "ch.qos.logback"                 % "logback-classic"           % logbackVersion,
-    "org.typelevel"                 %% "cats-core"                 % catsVersion,
-    "org.typelevel"                 %% "cats-effect"               % catsEffectVersion,
+    "com.typesafe"                   % "config"                                 % configVersion,
+    "com.typesafe.scala-logging"    %% "scala-logging"                          % scalaLoggingVersion,
+    "ch.qos.logback"                 % "logback-classic"                        % logbackVersion,
+    "org.typelevel"                 %% "cats-core"                              % catsVersion,
+    "org.typelevel"                 %% "cats-effect"                            % catsEffectVersion,
     // tapir
-    "com.softwaremill.sttp.tapir"   %% "tapir-core"                % tapirVersion,
-    "com.softwaremill.sttp.tapir"   %% "tapir-cats"                % tapirVersion,
-    "com.softwaremill.sttp.tapir"   %% "tapir-json-circe"          % tapirVersion,
-    "com.softwaremill.sttp.tapir"   %% "tapir-http4s-server"       % tapirVersion,
-    "com.softwaremill.sttp.tapir"   %% "tapir-openapi-docs"        % tapirVersion,
-    "com.softwaremill.sttp.tapir"   %% "tapir-swagger-ui-bundle"   % tapirVersion,
-    "com.softwaremill.sttp.apispec" %% "openapi-circe-yaml"        % openApiVersion,
+    "com.softwaremill.sttp.tapir"   %% "tapir-core"                             % tapirVersion,
+    "com.softwaremill.sttp.tapir"   %% "tapir-cats"                             % tapirVersion,
+    "com.softwaremill.sttp.tapir"   %% "tapir-json-circe"                       % tapirVersion,
+    "com.softwaremill.sttp.tapir"   %% "tapir-http4s-server"                    % tapirVersion,
+    "com.softwaremill.sttp.tapir"   %% "tapir-openapi-docs"                     % tapirVersion,
+    "com.softwaremill.sttp.tapir"   %% "tapir-swagger-ui-bundle"                % tapirVersion,
+    "com.softwaremill.sttp.apispec" %% "openapi-circe-yaml"                     % openApiVersion,
     // circe
-    "io.circe"                      %% "circe-core"                % circeVersion,
-    "io.circe"                      %% "circe-generic"             % circeVersion,
-    "io.circe"                      %% "circe-parser"              % circeVersion,
+    "io.circe"                      %% "circe-core"                             % circeVersion,
+    "io.circe"                      %% "circe-generic"                          % circeVersion,
+    "io.circe"                      %% "circe-parser"                           % circeVersion,
     // http4s
-    "org.http4s"                    %% "http4s-core"               % http4sVersion,
-    "org.http4s"                    %% "http4s-dsl"                % http4sVersion,
-    "org.http4s"                    %% "http4s-circe"              % http4sVersion,
-    "org.http4s"                    %% "http4s-blaze-server"       % http4sBlazeVersion,
-    "org.http4s"                    %% "http4s-blaze-client"       % http4sBlazeVersion,
-    "org.http4s"                    %% "http4s-prometheus-metrics" % http4sPrometheusVersion,
+    "org.http4s"                    %% "http4s-core"                            % http4sVersion,
+    "org.http4s"                    %% "http4s-dsl"                             % http4sVersion,
+    "org.http4s"                    %% "http4s-circe"                           % http4sVersion,
+    "org.http4s"                    %% "http4s-blaze-server"                    % http4sBlazeVersion,
+    "org.http4s"                    %% "http4s-blaze-client"                    % http4sBlazeVersion,
+    "org.http4s"                    %% "http4s-prometheus-metrics"              % http4sPrometheusVersion,
     // slick
-    "com.typesafe.slick"            %% "slick"                     % slickVersion,
-    "com.typesafe.slick"            %% "slick-hikaricp"            % slickVersion,
-    "org.postgresql"                 % "postgresql"                % postgresqlVersion,
+    "com.typesafe.slick"            %% "slick"                                  % slickVersion,
+    "com.typesafe.slick"            %% "slick-hikaricp"                         % slickVersion,
+    "org.postgresql"                 % "postgresql"                             % postgresqlVersion,
     // flyway 4 scala
-    "com.github.geirolz"            %% "fly4s-core"                % fly4sVersion,
+    "com.github.geirolz"            %% "fly4s-core"                             % fly4sVersion,
     // prometheus
-    "io.prometheus"                  % "simpleclient"              % prometheusVersion,
-    "io.prometheus"                  % "simpleclient_hotspot"      % prometheusVersion,
+    "io.prometheus"                  % "prometheus-metrics-core"                % prometheusVersion,
+    "io.prometheus"                  % "prometheus-metrics-instrumentation-jvm" % prometheusVersion,
     // macwire
-    "com.softwaremill.macwire"      %% "util"                      % macwireVersion,
-    "com.softwaremill.macwire"      %% "macros"                    % macwireVersion         % Provided,
+    "com.softwaremill.macwire"      %% "util"                                   % macwireVersion,
+    "com.softwaremill.macwire"      %% "macros"                                 % macwireVersion         % Provided,
     // jwt authentication
-    "com.github.jwt-scala"          %% "jwt-core"                  % jwtVersion,
-    "com.github.jwt-scala"          %% "jwt-circe"                 % jwtVersion,
-    "org.mindrot"                    % "jbcrypt"                   % bcryptVersion,
+    "com.github.jwt-scala"          %% "jwt-core"                               % jwtVersion,
+    "com.github.jwt-scala"          %% "jwt-circe"                              % jwtVersion,
+    "org.mindrot"                    % "jbcrypt"                                % bcryptVersion,
     // munit
-    "org.scalameta"                 %% "munit"                     % munitVersion           % Test,
-    "org.typelevel"                 %% "munit-cats-effect"         % munitCatsEffectVersion % Test,
-    "com.alejandrohdezma"           %% "http4s-munit"              % http4sMunitVersion     % Test
+    "org.scalameta"                 %% "munit"                                  % munitVersion           % Test,
+    "org.typelevel"                 %% "munit-cats-effect"                      % munitCatsEffectVersion % Test,
+    "com.alejandrohdezma"           %% "http4s-munit"                           % http4sMunitVersion     % Test
   )
 }
 
